@@ -1,0 +1,74 @@
+# docker-compose.yml
+# Two-service stack: PostgreSQL database and FastAPI backend
+# Usage: docker compose up -d
+#
+# Services:
+#   db  - PostgreSQL 16 with named volume for persistence
+#   api - FastAPI application on 0.0.0.0:8000
+
+services:
+  db:
+    image: postgres:16.4-alpine
+    container_name: app-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-appdb}
+      POSTGRES_USER: ${POSTGRES_USER:-appuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: app-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${API_BIND_ADDRESS:-127.0.0.1}:${API_PORT:-8080}:8000"
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB:-appdb}
+      POSTGRES_USER: ${POSTGRES_USER:-appuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}
+      AUTH_MODE: ${AUTH_MODE:-ldap}
+      LDAP_SERVER_URI: ${LDAP_SERVER_URI:-}
+      LDAP_USER_BASE_DN: ${LDAP_USER_BASE_DN:-}
+      LDAP_USER_DN_TEMPLATE: ${LDAP_USER_DN_TEMPLATE:-}
+      LDAP_ADMIN_GROUP_DN: ${LDAP_ADMIN_GROUP_DN:-}
+      LDAP_GROUP_BASE_DN: ${LDAP_GROUP_BASE_DN:-}
+      LDAP_SHEET_ACCESS_JSON: ${LDAP_SHEET_ACCESS_JSON:-}
+      LDAP_CONNECT_TIMEOUT_SECONDS: ${LDAP_CONNECT_TIMEOUT_SECONDS:-5}
+      SESSION_SECRET: ${SESSION_SECRET:-}
+      SESSION_TTL_SECONDS: ${SESSION_TTL_SECONDS:-3600}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-true}
+    networks:
+      - backend-net
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\" || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  pgdata:
+    name: app-pgdata
+
+networks:
+  backend-net:
+    name: app-backend-net
+    driver: bridge
+

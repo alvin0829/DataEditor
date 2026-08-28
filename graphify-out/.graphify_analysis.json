@@ -1,0 +1,453 @@
+{
+  "communities": {
+    "0": [
+      "any",
+      "backend_auth",
+      "backend_auth_authconfig",
+      "backend_auth_authenticate_ldap",
+      "backend_auth_authidentity",
+      "backend_auth_authidentity_as_dict",
+      "backend_auth_authunavailable",
+      "backend_auth_b64decode",
+      "backend_auth_b64encode",
+      "backend_auth_create_session_token",
+      "backend_auth_disabled_identity",
+      "backend_auth_dn_within_base",
+      "backend_auth_env_bool",
+      "backend_auth_env_int",
+      "backend_auth_invalidcredentials",
+      "backend_auth_load_auth_config",
+      "backend_auth_rationale_1",
+      "backend_auth_rationale_112",
+      "backend_auth_rationale_119",
+      "backend_auth_validate_ldap_config",
+      "backend_auth_verify_session_token",
+      "backend_main_login",
+      "backend_main_require_admin",
+      "runtimeerror",
+      "tests_test_auth",
+      "tests_test_auth_ldap_environment",
+      "tests_test_auth_py_asyncio",
+      "tests_test_auth_rationale_1",
+      "tests_test_auth_test_admin_page_redirects_to_login",
+      "tests_test_auth_test_bad_credentials_do_not_set_cookie",
+      "tests_test_auth_test_direct_dn_authentication_reads_own_entry",
+      "tests_test_auth_test_direct_dn_authentication_rejects_outside_base",
+      "tests_test_auth_test_disabled_mode_identity",
+      "tests_test_auth_test_expired_session_is_rejected",
+      "tests_test_auth_test_ldap_config_does_not_require_service_account",
+      "tests_test_auth_test_ldap_config_requires_permitted_base",
+      "tests_test_auth_test_ldap_mode_missing_session_is_unauthorized",
+      "tests_test_auth_test_login_sets_session_and_identifies_user",
+      "tests_test_auth_test_logout_clears_session",
+      "tests_test_auth_test_non_admin_login_is_forbidden",
+      "tests_test_auth_test_tampered_session_is_rejected"
+    ],
+    "1": [
+      "tests_test_admin_ui",
+      "tests_test_admin_ui_create_setting",
+      "tests_test_admin_ui_py_asyncio",
+      "tests_test_admin_ui_rationale_1",
+      "tests_test_admin_ui_test_admin_page_returns_200_html",
+      "tests_test_admin_ui_test_create_user_setting_201",
+      "tests_test_admin_ui_test_create_user_setting_duplicate_409",
+      "tests_test_admin_ui_test_create_user_setting_empty_email_422",
+      "tests_test_admin_ui_test_create_user_setting_normalizes_email_lowercase",
+      "tests_test_admin_ui_test_create_user_setting_rejects_invalid_enum",
+      "tests_test_admin_ui_test_create_user_setting_requires_display_name",
+      "tests_test_admin_ui_test_create_user_setting_strips_whitespace",
+      "tests_test_admin_ui_test_create_user_setting_uses_defaults",
+      "tests_test_admin_ui_test_create_user_setting_whitespace_display_name_422",
+      "tests_test_admin_ui_test_create_user_setting_whitespace_email_422",
+      "tests_test_admin_ui_test_delete_user_setting_204",
+      "tests_test_admin_ui_test_delete_user_setting_invalid_uuid_422",
+      "tests_test_admin_ui_test_delete_user_setting_not_found_404",
+      "tests_test_admin_ui_test_get_user_setting_by_id",
+      "tests_test_admin_ui_test_get_user_setting_invalid_uuid_422",
+      "tests_test_admin_ui_test_get_user_setting_not_found_404",
+      "tests_test_admin_ui_test_list_user_settings_empty",
+      "tests_test_admin_ui_test_list_user_settings_returns_items",
+      "tests_test_admin_ui_test_list_user_settings_search_by_name",
+      "tests_test_admin_ui_test_list_user_settings_search_q",
+      "tests_test_admin_ui_test_patch_user_setting_duplicate_email_409",
+      "tests_test_admin_ui_test_patch_user_setting_invalid_uuid_422",
+      "tests_test_admin_ui_test_patch_user_setting_not_found_404",
+      "tests_test_admin_ui_test_patch_user_setting_strips_whitespace",
+      "tests_test_admin_ui_test_patch_user_setting_updates_fields",
+      "tests_test_admin_ui_test_patch_user_setting_whitespace_email_422",
+      "tests_test_admin_ui_test_root_follows_to_admin",
+      "tests_test_admin_ui_test_root_serves_admin_on_api_port"
+    ],
+    "2": [
+      "backend_database",
+      "backend_database_base",
+      "backend_database_database_url",
+      "backend_database_get_db",
+      "backend_database_init_db",
+      "backend_database_rationale_1",
+      "backend_database_rationale_45",
+      "backend_database_rationale_51",
+      "backend_main_lifespan",
+      "backend_models",
+      "backend_models_auditlog",
+      "backend_models_contractservice",
+      "backend_models_rationale_1",
+      "backend_models_rationale_71",
+      "backend_models_usersetting",
+      "backend_models_utcnow",
+      "datetime",
+      "declarativebase",
+      "fastapi",
+      "fixture",
+      "tests_conftest",
+      "tests_conftest_client",
+      "tests_conftest_db_session",
+      "tests_conftest_override_get_db",
+      "tests_conftest_rationale_1",
+      "tests_conftest_setup_db"
+    ],
+    "3": [
+      "backend_static_app",
+      "backend_static_app_addrow",
+      "backend_static_app_apifetch",
+      "backend_static_app_closeconfirm",
+      "backend_static_app_columnletters",
+      "backend_static_app_config",
+      "backend_static_app_createcelleditor",
+      "backend_static_app_deleteselected",
+      "backend_static_app_dirtycount",
+      "backend_static_app_filteredrows",
+      "backend_static_app_focuscell",
+      "backend_static_app_handlegridkeys",
+      "backend_static_app_loadsheet",
+      "backend_static_app_moveselection",
+      "backend_static_app_readerror",
+      "backend_static_app_render",
+      "backend_static_app_requiredtext",
+      "backend_static_app_saverows",
+      "backend_static_app_selectcell",
+      "backend_static_app_setcellvalue",
+      "backend_static_app_setstatus",
+      "backend_static_app_showconfirm",
+      "backend_static_app_switchsheet",
+      "backend_static_app_updateactions",
+      "backend_static_app_updateformulabar"
+    ],
+    "4": [
+      "tests_test_crud",
+      "tests_test_crud_create",
+      "tests_test_crud_py_asyncio",
+      "tests_test_crud_rationale_1",
+      "tests_test_crud_test_create_201",
+      "tests_test_crud_test_create_duplicate_409",
+      "tests_test_crud_test_create_empty_department_422",
+      "tests_test_crud_test_create_empty_number_422",
+      "tests_test_crud_test_create_whitespace_only_fields_422",
+      "tests_test_crud_test_create_writes_audit",
+      "tests_test_crud_test_get_by_id",
+      "tests_test_crud_test_get_invalid_uuid_422",
+      "tests_test_crud_test_get_not_found_404",
+      "tests_test_crud_test_list_empty",
+      "tests_test_crud_test_list_filter_department",
+      "tests_test_crud_test_list_filter_status",
+      "tests_test_crud_test_list_returns_items",
+      "tests_test_crud_test_list_search_q",
+      "tests_test_crud_test_patch_duplicate_number_409",
+      "tests_test_crud_test_patch_not_found_404",
+      "tests_test_crud_test_patch_updates_fields",
+      "tests_test_crud_test_update_writes_audit"
+    ],
+    "5": [
+      "asyncsession",
+      "backend_main",
+      "backend_main_admin_console_page",
+      "backend_main_admin_page",
+      "backend_main_auth_me",
+      "backend_main_delete_contract_service",
+      "backend_main_delete_user_setting",
+      "backend_main_get_request",
+      "backend_main_get_user_setting",
+      "backend_main_health",
+      "backend_main_list_contract_services",
+      "backend_main_list_requests",
+      "backend_main_list_user_settings",
+      "backend_main_login_page",
+      "backend_main_rationale_1",
+      "backend_main_root",
+      "backend_main_update_user_setting",
+      "backend_schemas_healthresponse",
+      "delete",
+      "get",
+      "request"
+    ],
+    "6": [
+      "backend_schemas",
+      "backend_schemas_contractserviceimportresponse",
+      "backend_schemas_contractservicelistresponse",
+      "backend_schemas_contractserviceresponse",
+      "backend_schemas_identityresponse",
+      "backend_schemas_listresponse",
+      "backend_schemas_loginrequest",
+      "backend_schemas_rationale_1",
+      "backend_schemas_requestcreate",
+      "backend_schemas_requestresponse",
+      "backend_schemas_requestupdate",
+      "backend_schemas_stripnonemptystrings",
+      "backend_schemas_usersettinglistresponse",
+      "backend_schemas_usersettingresponse",
+      "backend_schemas_usersettingupdate",
+      "backend_schemas_usersettingupdate_strip_whitespace",
+      "basemodel"
+    ],
+    "7": [
+      "backend_main_create_contract_service",
+      "backend_main_ensure_rbq_available",
+      "backend_main_extract_rbq_no",
+      "backend_main_import_contract_services_csv",
+      "backend_main_logout",
+      "backend_main_parse_contract_service_csv",
+      "backend_main_rationale_436",
+      "backend_main_update_contract_service",
+      "backend_main_validate_csv_upload_type",
+      "backend_schemas_contractservicecreate",
+      "backend_schemas_contractservicecreate_strip_contract_no",
+      "patch",
+      "post",
+      "response",
+      "uploadfile",
+      "uuid"
+    ],
+    "8": [
+      "tests_test_contract_services",
+      "tests_test_contract_services_csv_bytes",
+      "tests_test_contract_services_csv_row",
+      "tests_test_contract_services_py_asyncio",
+      "tests_test_contract_services_test_contract_service_create_list_update_and_delete",
+      "tests_test_contract_services_test_contract_service_rejects_unknown_workbook_column",
+      "tests_test_contract_services_test_csv_import_is_atomic_when_rbq_is_duplicated",
+      "tests_test_contract_services_test_csv_import_locates_heading_row_and_skips_non_service_rows",
+      "tests_test_contract_services_test_csv_import_rejects_heading_only_csv_with_no_data",
+      "tests_test_contract_services_test_csv_import_rejects_malformed_service_row",
+      "tests_test_contract_services_test_csv_import_rejects_missing_heading_row",
+      "tests_test_contract_services_test_csv_import_requires_exact_headers_and_applies_contract_no",
+      "tests_test_contract_services_test_rbq_number_is_unique"
+    ],
+    "9": [
+      "backend_main_create_user_setting",
+      "backend_schemas_contractservicefields",
+      "backend_schemas_contractservicefields_ensure_known_headers",
+      "backend_schemas_contractservicefields_normalize_field_aliases",
+      "backend_schemas_contractserviceupdate",
+      "backend_schemas_contractserviceupdate_strip_contract_no",
+      "backend_schemas_loginrequest_strip_username",
+      "backend_schemas_stripnonemptystrings_strip_non_empty_strings",
+      "backend_schemas_usersettingcreate",
+      "backend_schemas_usersettingcreate_strip_whitespace",
+      "field_validator",
+      "model_validator"
+    ],
+    "10": [
+      "build_proposal_pdf",
+      "build_proposal_pdf_bilingual",
+      "build_proposal_pdf_box",
+      "build_proposal_pdf_footer",
+      "build_proposal_pdf_p_cn",
+      "build_proposal_pdf_p_en",
+      "build_proposal_pdf_section"
+    ],
+    "11": [
+      "scripts_deploy",
+      "scripts_deploy_invoke_dockercommand",
+      "scripts_deploy_write_fail",
+      "scripts_deploy_write_ok",
+      "scripts_deploy_write_step",
+      "scripts_deploy_write_warn"
+    ],
+    "12": [
+      "backend_main_audit_snapshot",
+      "backend_main_create_request",
+      "backend_main_update_request",
+      "backend_main_write_audit",
+      "backend_models_servicerequest"
+    ],
+    "13": [
+      "backend_static_admin_console",
+      "backend_static_admin_console_apifetch",
+      "backend_static_admin_console_readerror",
+      "backend_static_admin_console_setstatus"
+    ],
+    "14": [
+      "tests_test_health",
+      "tests_test_health_py_asyncio",
+      "tests_test_health_rationale_1",
+      "tests_test_health_test_health_ok"
+    ],
+    "15": [
+      "scripts_restore",
+      "scripts_restore_invoke_dockercommand"
+    ],
+    "16": [
+      "backend_init"
+    ],
+    "17": [
+      "backend_static_login"
+    ],
+    "18": [
+      "scripts_backup"
+    ],
+    "19": [
+      "scripts_generate_env"
+    ],
+    "20": [
+      "scripts_logs"
+    ],
+    "21": [
+      "scripts_status"
+    ],
+    "22": [
+      "scripts_stop"
+    ],
+    "23": [
+      "tests_init"
+    ]
+  },
+  "cohesion": {
+    "0": 0.13414634146341464,
+    "1": 0.14583333333333334,
+    "2": 0.10461538461538461,
+    "3": 0.23333333333333334,
+    "4": 0.22510822510822512,
+    "5": 0.21904761904761905,
+    "6": 0.20588235294117646,
+    "7": 0.18333333333333332,
+    "8": 0.34615384615384615,
+    "9": 0.18181818181818182,
+    "10": 0.6190476190476191,
+    "11": 0.3333333333333333,
+    "12": 0.7,
+    "13": 0.5,
+    "14": 0.5,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_auth_authidentity",
+      "label": "AuthIdentity",
+      "degree": 23
+    },
+    {
+      "id": "tests_test_admin_ui_create_setting",
+      "label": "_create_setting()",
+      "degree": 18
+    },
+    {
+      "id": "tests_test_crud_create",
+      "label": "_create()",
+      "degree": 15
+    },
+    {
+      "id": "backend_auth_load_auth_config",
+      "label": "load_auth_config()",
+      "degree": 14
+    },
+    {
+      "id": "backend_auth_authenticate_ldap",
+      "label": "authenticate_ldap()",
+      "degree": 14
+    },
+    {
+      "id": "backend_static_app_render",
+      "label": "render()",
+      "degree": 14
+    },
+    {
+      "id": "backend_main_import_contract_services_csv",
+      "label": "import_contract_services_csv()",
+      "degree": 12
+    },
+    {
+      "id": "tests_test_auth_ldap_environment",
+      "label": "_ldap_environment()",
+      "degree": 12
+    },
+    {
+      "id": "backend_static_app_config",
+      "label": "config()",
+      "degree": 11
+    },
+    {
+      "id": "backend_auth_create_session_token",
+      "label": "create_session_token()",
+      "degree": 10
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_direct_dn_authentication_reads_own_entry()",
+      "target": "AuthIdentity",
+      "source_files": [
+        "tests/test_auth.py",
+        "backend/auth.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "test_expired_session_is_rejected()",
+      "target": "AuthIdentity",
+      "source_files": [
+        "tests/test_auth.py",
+        "backend/auth.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "test_non_admin_login_is_forbidden()",
+      "target": "AuthIdentity",
+      "source_files": [
+        "tests/test_auth.py",
+        "backend/auth.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "test_direct_dn_authentication_reads_own_entry()",
+      "target": "load_auth_config()",
+      "source_files": [
+        "tests/test_auth.py",
+        "backend/auth.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "test_direct_dn_authentication_rejects_outside_base()",
+      "target": "load_auth_config()",
+      "source_files": [
+        "tests/test_auth.py",
+        "backend/auth.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

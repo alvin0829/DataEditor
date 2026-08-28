@@ -1,0 +1,29 @@
+# Environment (contains secrets - never commit)
+.env
+
+# Docker named volumes are managed by Docker, not tracked
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files (large, should not be in git)
+backups/
+*.dump
+*.sql.gz
+
+# Python test/build cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+dev.db
+
+# Local multi-model orchestration transcripts and usage ledger
+.multi-ai/

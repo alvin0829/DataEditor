@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin sign in</title>
+    <link rel="stylesheet" href="/static/styles.css?v=2">
+</head>
+<body>
+    <main class="login-panel">
+        <h1>Admin sign in</h1>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input id="username" name="username" autocomplete="username" placeholder="e.g. dicky" required autofocus>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button type="submit">Sign in</button>
+            <p id="login-status" class="status" aria-live="polite"></p>
+        </form>
+    </main>
+    <script src="/static/login.js?v=2"></script>
+</body>
+</html>

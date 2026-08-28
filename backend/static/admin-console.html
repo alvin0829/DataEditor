@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Console</title>
+    <link rel="stylesheet" href="/static/styles.css?v=4">
+</head>
+<body class="console-page">
+    <a class="skip-link" href="#csv-import">Skip to CSV import</a>
+    <header class="console-topbar">
+        <div>
+            <h1>Admin Console</h1>
+            <p>Higher-permission tools for contract-service data.</p>
+        </div>
+        <div class="console-actions">
+            <span id="console-user" aria-live="polite"></span>
+            <a class="button-link" href="/">Back to editor</a>
+            <button id="btn-console-logout" type="button">Sign out</button>
+        </div>
+    </header>
+
+    <main id="csv-import" class="console-main">
+        <section class="console-card" aria-labelledby="csv-import-title">
+            <h2 id="csv-import-title">Import XXX Services CSV</h2>
+            <p>Every imported service row receives the Contract No. entered below. The importer automatically finds the 44 headings from the workbook’s <code>XXX</code> sheet row 6 and ignores report titles, blank lines, and summary rows.</p>
+
+            <form id="csv-import-form" novalidate>
+                <label for="contract-no">Contract No.</label>
+                <input id="contract-no" name="contract_no" type="text" autocomplete="off" required maxlength="128" aria-describedby="contract-no-help">
+                <p id="contract-no-help" class="field-help">This value is applied to every imported service row.</p>
+
+                <label for="csv-file">XXX services CSV</label>
+                <input id="csv-file" name="file" type="file" accept=".csv,text/csv" required aria-describedby="csv-file-help">
+                <p id="csv-file-help" class="field-help">RBQ No. is the unique identifier. Duplicate or blank RBQ No. values reject the complete import.</p>
+
+                <div class="console-form-actions">
+                    <button id="btn-import" type="submit">Import CSV</button>
+                    <span id="import-status" class="status" aria-live="polite" aria-atomic="true"></span>
+                </div>
+            </form>
+        </section>
+
+        <section class="console-card console-card-muted" aria-labelledby="import-rules-title">
+            <h2 id="import-rules-title">Import rules</h2>
+            <ul>
+                <li>Only UTF-8 CSV files are accepted.</li>
+                <li>The heading row must match <code>XXX!A6:AR6</code> exactly, including order; it can appear anywhere in the CSV.</li>
+                <li>The import is all-or-nothing: errors create no rows.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="/static/admin-console.js?v=1"></script>
+</body>
+</html>

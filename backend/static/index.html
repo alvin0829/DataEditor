@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Database Editor</title>
+    <link rel="stylesheet" href="/static/styles.css?v=3">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand-row">
+                <h1>Database Editor</h1>
+                <span id="sheet-description">XXX workbook database table</span>
+                <span class="spacer"></span>
+                <span id="current-user" aria-live="polite"></span>
+                <a id="admin-console-link" class="admin-console-link" href="/admin-console" hidden>Admin Console</a>
+                <button id="btn-logout" type="button">Sign out</button>
+            </div>
+
+            <div class="toolbar" role="toolbar" aria-label="Database actions">
+                <button id="btn-add" type="button">Add row</button>
+                <button id="btn-save" type="button" disabled>Save changes</button>
+                <button id="btn-delete" type="button" disabled>Delete row</button>
+                <button id="btn-reload" type="button">Reload</button>
+                <label class="search-label" for="search">Search</label>
+                <input id="search" type="search" placeholder="Filter rows">
+                <span id="status" class="status" aria-live="polite" aria-atomic="true"></span>
+            </div>
+
+            <div class="formula-bar">
+                <output id="cell-reference" aria-label="Selected cell">—</output>
+                <span aria-hidden="true">fx</span>
+                <label class="sr-only" for="formula-input">Selected cell value</label>
+                <input id="formula-input" type="text" disabled>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <div class="grid-wrap" role="application" aria-label="Database spreadsheet">
+                <table id="spreadsheet" role="grid" aria-label="Database records">
+                    <thead id="table-head"></thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+                <div id="empty-state" class="empty-state" hidden>
+                    No records. Use <strong>Add row</strong> to create one through the API.
+                </div>
+            </div>
+        </main>
+
+        <nav class="sheet-tabs" aria-label="Database tables" role="tablist">
+            <button type="button" role="tab" data-sheet="xxx" aria-selected="true">XXX Services</button>
+            <button type="button" role="tab" data-sheet="settings" aria-selected="false">User Settings</button>
+        </nav>
+    </div>
+
+    <div id="confirm-dialog" class="dialog-overlay" hidden>
+        <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-message">
+            <h2 id="dialog-title">Delete row?</h2>
+            <p id="dialog-message"></p>
+            <div class="dialog-actions">
+                <button id="dialog-cancel" type="button">Cancel</button>
+                <button id="dialog-confirm" type="button" class="danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js?v=8"></script>
+</body>
+</html>
